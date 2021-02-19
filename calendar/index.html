@@ -3,32 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <link <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
-    <title>Javascript Calendar</title>
 </head>
 <body>
-
-
-<div id="container">
-    <div id="header"></div>
-
-    <div id="weekdays">
-       <div>Sunday</div>
-       <div>Monday</div>
-       <div>Tuesday</div>
-       <div>Wednesday</div>
-       <div>Thursday</div>
-       <div>Friday</div>
-       <div>Saturday</div>
-
+    <h1>February</h1>
+    <div id="calendar">
+      <!-- days cells will be inserted here -->
+    </div>
+    <h2>Add Meeting</h2>
+    <div id="addMeeting">
+      <div>
+        <h4>Meeting Day</h4>
+        <span id="newMeetingDay">Click on a Day</span>
+      </div>
+      <div>
+        <h4>Meeting Time</h4>
+        <input type="time" id="newMeetingTime" />
+      </div>
+      <div>
+        <h4>Meeting Name</h4>
+        <input
+          type="text"
+          id="newMeetingName"
+          placeholder="Insert a name for the meeting"
+        />
+      </div>
+      <div>
+        <h4>Add</h4>
+        <input type="button" value="Save Meeting" onclick="saveMeeting()" />
+      </div>
+    </div>
+    <br />
+    <div id="appointments">
+      <h2>Appointments for the day:</h2>
+      <ul id="appointmentList"></ul>
+      <!-- this will receive appointments via js -->
     </div>
 
-    <div id="calendar"></div>
-</div>
-
-
+    <script src="./cal.js"></script>
     
-    
-<script src="./script.js"></script>
+   
 </body>
 </html>
